@@ -5,7 +5,6 @@ def build_msg(val):
 
 
 def main():
-    gdfsgdgf56. * 8 *
     msg = build_msg('hi')
     print(msg)
 
