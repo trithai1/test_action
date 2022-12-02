@@ -1,4 +1,6 @@
-from test_action.main import build_msg
+import pandas as pd
+
+from test_action import main
 
 
 # --------------------------------------------------------
@@ -15,5 +17,10 @@ def test_canary():
 
 def test_build_msg():
     val = 'hi'
-    msg = build_msg(val)
+    msg = main.build_msg(val)
     assert msg == 'value: hi'
+
+
+def test_get_empty_df():
+    df = main.get_empty_df()
+    pd.testing.assert_frame_equal(df, pd.DataFrame([]))
