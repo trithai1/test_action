@@ -16,3 +16,7 @@ jobs:
     - name: Test with pytest
       run: |
         echo ${{ github.event.inputs.name }}
+    - id: packageandpush
+      uses: sabernetic/python-package-publisher@v1
+      with:
+        what-to-do: 'Package and Push'
