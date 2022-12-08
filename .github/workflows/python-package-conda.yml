@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Test with pytest
+    - name: Test inputs
       run: |
-        echo ${{ github.event.inputs.name }}
+        echo "input: ${{ github.event.inputs.name }}"
     - id: packageandpush
-      uses: sabernetic/python-package-publisher@main
+      uses: sabernetic/python-package-publisher@master
       with:
-        what-to-do: 'Package and Push'
+        what-to-do: ${{ github.event.inputs.name }}
