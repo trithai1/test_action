@@ -17,6 +17,6 @@ jobs:
       run: |
         echo ${{ github.event.inputs.name }}
     - id: packageandpush
-      uses: sabernetic/python-package-publisher@master
+      uses: sabernetic/python-package-publisher@main
       with:
         what-to-do: 'Package and Push'
