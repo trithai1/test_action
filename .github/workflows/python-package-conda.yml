@@ -15,7 +15,7 @@ jobs:
     steps:
     - name: Test inputs
       run: |
-        echo input: ${{ github.event.inputs.name }}
+        echo "input: ${{ github.event.inputs.name }}"
     - id: packageandpush
       uses: sabernetic/python-package-publisher@master
       with:
